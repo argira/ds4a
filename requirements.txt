@@ -1,6 +1,7 @@
 streamlit
 altair
 pandas
+matplotlib
 #openpyxl
 #pyjanitor
 #sidetable
