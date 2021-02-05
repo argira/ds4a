@@ -3,6 +3,7 @@ import streamlit as st
 # working with sample data.
 import numpy as np
 import pandas as pd
+import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 import statsmodels.formula.api as sm
@@ -17,7 +18,13 @@ from load_data import data_prep_final_merged
 from scipy import stats
 from helpers import pearsonr_ci
 
-import streamlit as st
+import streamlit as stfrom matplotlib.backends.backend_agg import RendererAgg
+_lock = RendererAgg.lock
+
+with _lock:
+  fig.title('This is a figure)')
+  fig.plot([1,20,3,40])
+  st.pyplot(fig)
 def app():
     st.title('Because Los Angeles is such a large district, we identified it as an outlier and we dropped it.')
     # https://medium.com/@u.praneel.nihar/building-multi-page-web-app-using-streamlit-7a40d55fa5b4
