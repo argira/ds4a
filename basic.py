@@ -115,7 +115,7 @@ def correlation_table_revenue_scores_ethnicity(df):
     ### It seems that revenue per student has a negative correlation to Mean Scale score or students passing. As we noted on each of the different ethnicities it would seem the larger the revenue per student the lower test scores, which is not what we were expecting. We then looked into searching for other factors that might be driving scores to be low.
         ''')
 
-    total_enrollment_total_revenue(df)
-    mean_scale_score_by_ethnicity(df_assessment)
-    revenue_scale_scores_scatterplot(df_final_merged)
-    correlation_table_revenue_scores_ethnicity(df_final_merged)
+total_enrollment_total_revenue(df)
+mean_scale_score_by_ethnicity(df_assessment)
+revenue_scale_scores_scatterplot(df_final_merged)
+correlation_table_revenue_scores_ethnicity(df_final_merged)
