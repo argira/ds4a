@@ -1,4 +1,4 @@
-seaboarn
+seaborn
 statsmodels
 altair
 spicy
