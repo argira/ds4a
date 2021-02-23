@@ -2,7 +2,7 @@ import pandas as pd
 
 def data_prep_total_enrollment():
 
-    df = pd.read_csv('../organized_notebooks/dashboard_total_enrollment.csv', index_col = 0)
+    df = pd.read_csv('organized_notebooks/dashboard_total_enrollment.csv', index_col = 0)
     #We eliminate the office of education and department of education because they don't have students enrolled directly
     df = df.loc[df['Agency Name'].apply(lambda x: 'OFFICE OF EDUCATION' not in x)]
     df = df.loc[df['Agency Name'].apply(lambda x: 'DEPARTMENT OF EDUCATION' not in x)]
@@ -17,10 +17,10 @@ def data_prep_total_enrollment():
     return df
 
 def data_prep_assessment():
-    return pd.read_csv('../organized_notebooks/dashboard_assessment.csv', index_col=0)
+    return pd.read_csv('organized_notebooks/dashboard_assessment.csv', index_col=0)
 
 def data_prep_final_merged():
-    df = pd.read_csv('../organized_notebooks/dashboard_final_merged.csv')
+    df = pd.read_csv('organized_notebooks/dashboard_final_merged.csv')
     # dataset containing school districts with over $20,000 revenue per student - during our research
     # we found information that there are no schools in California with revenue higher than 20 K and we chose to separate
     #those schools.
@@ -31,4 +31,4 @@ def data_prep_final_merged():
     return df_new
 
 def data_prep_by_school():
-    return pd.read_csv('../organized_notebooks/dashboard_school_df.csv', index_col=0)
+    return pd.read_csv('organized_notebooks/dashboard_school_df.csv', index_col=0)
