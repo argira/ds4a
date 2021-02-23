@@ -70,30 +70,30 @@ def revenue_scale_scores_scatterplot(df):
 def correlation_table_revenue_scores_ethnicity(df):
     plt.figure()
     corr_cols=['District Code', 'Agency Name', 'Total Revenue',
-   'Total Enrollment',
-   'County Code', 'Test Id',
-   'Total Tested At Entity Level', 'Total Tested with Scores',
-   'CAASPP Reported Enrollment', 'Students Tested', 'Students with Scores',
-   'Total Standard Exceeded', 'Total Standard Met',
-   'Total Standard Met and Above', 'Total Standard Nearly Met',
-   'Total Standard Not Met', 'Percentate Std Exceed', 'Percentage Std Met',
-   'Percentage Std Nearly Met', 'Percentage Std Not Met',
-   'Percentage Std Met and Above']
-   df_corr= df.drop(columns= corr_cols)
-   #corr=df_corr.corr()
-   #corr.style.background_gradient(cmap='PiYG')
-   #corr.style.background_gradient(cmap='coolwarm')
-   # https://github.com/altair-viz/altair/pull/1945
-   corrMatrix = df_corr.corr().reset_index().melt('index')
-   corrMatrix.columns = ['Revenue per student', 'Count Enrollment per ethnicity', 'correlation']
-   chart = alt.Chart(corrMatrix).mark_rect().encode(
+    'Total Enrollment',
+    'County Code', 'Test Id',
+    'Total Tested At Entity Level', 'Total Tested with Scores',
+    'CAASPP Reported Enrollment', 'Students Tested', 'Students with Scores',
+    'Total Standard Exceeded', 'Total Standard Met',
+    'Total Standard Met and Above', 'Total Standard Nearly Met',
+    'Total Standard Not Met', 'Percentate Std Exceed', 'Percentage Std Met',
+    'Percentage Std Nearly Met', 'Percentage Std Not Met',
+    'Percentage Std Met and Above']
+    df_corr= df.drop(columns= corr_cols)
+    #corr=df_corr.corr()
+    #corr.style.background_gradient(cmap='PiYG')
+    #corr.style.background_gradient(cmap='coolwarm')
+    #https://github.com/altair-viz/altair/pull/1945 
+    corrMatrix = df_corr.corr().reset_index().melt('index')
+    corrMatrix.columns = ['Revenue per student', 'Count Enrollment per ethnicity', 'correlation']
+    chart = alt.Chart(corrMatrix).mark_rect().encode(
                x=alt.X('Revenue per student', title=None),
                y=alt.Y('Count Enrollment per ethnicity', title=None),
                color=alt.Color('correlation', legend=None),
-           ).properties(
-            width=alt.Step(80),
-            height=alt.Step(80)
-      )
+            ).properties(
+             width=alt.Step(80),
+             height=alt.Step(80)
+            )
 
    chart += chart.mark_text(size=25).encode(
         text=alt.Text('correlation', format=".2f"),
