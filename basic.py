@@ -21,7 +21,7 @@ from helpers import pearsonr_ci
 #import streamlit as stfrom matplotlib.backends.backend_agg import RendererAgg_lock = RendererAgg.lock
 with _lock:
 # fig.title('This is a figure)')
- # fig.plot([1,20,3,40])st.pyplot(fig)
+# fig.plot([1,20,3,40])st.pyplot(fig)
 def app():
     st.title('Because Los Angeles is such a large district, we identified it as an outlier and we dropped it.')
     # https://medium.com/@u.praneel.nihar/building-multi-page-web-app-using-streamlit-7a40d55fa5b4
