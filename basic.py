@@ -18,9 +18,9 @@ from load_data import data_prep_final_merged
 from scipy import stats
 from helpers import pearsonr_ci
 
-import streamlit as stfrom matplotlib.backends.backend_agg import RendererAgg_lock = RendererAgg.lock
+#import streamlit as stfrom matplotlib.backends.backend_agg import RendererAgg_lock = RendererAgg.lock
 with _lock:
-  fig.title('This is a figure)')
+ # fig.title('This is a figure)')
   fig.plot([1,20,3,40])
   st.pyplot(fig)
 def app():
