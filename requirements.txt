@@ -1,4 +1,4 @@
-seaboard
+seaboarn
 statsmodels
 altair
 spicy
