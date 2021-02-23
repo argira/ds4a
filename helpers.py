@@ -1,6 +1,8 @@
 from scipy import stats
 import streamlit as st
 import numpy as np
+from scipy.stats import chi2_contingency
+from scipy.stats import chi2
 
 def best_fit(X, Y):
     xbar = sum(X)/len(X)
@@ -50,3 +52,6 @@ def pearsonr_ci_details(x,y):
     st.text('The lower point of the confident interval is' + str(lo))
     st.text('The higher point of the confidence interval is' + str(hi))
 
+def chi_squared_details(x):
+    g,p,dof,expctd = chi2_contingency(x)
+    st.text('P-value of Chi-Square test for Disadvantaged vs Ethnicity is:' +str(p))

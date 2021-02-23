@@ -2,20 +2,15 @@ import basic
 import goals
 import eda_districs
 import eda_schools
+import eda_ethnicities
 import streamlit as st
-#from matplotlib.backends.backend_agg import RendererAgg
-#_lock = RendererAgg.lock
 
-#with _lock:
- # fig.title('This is a figure)')
-  #fig.plot([1,20,3,40])
-  #st.pyplot(fig)
-  
 PAGES = {
     "Goals": goals,
-    "Basic Analytics": basic,
-    "School Districs EDA": eda_districs,
-    "Further EDA at School level": eda_schools
+    "Basic Analysis": basic,
+    "Extended EDA": eda_districs,
+    "Further EDA at School level": eda_schools,
+    "Analysis for Ethniciies": eda_ethnicities
 }
 
 st.sidebar.title('Navigation')
