@@ -22,7 +22,7 @@ from helpers import pearsonr_ci
 #with _lock:
 # fig.title('This is a figure)')
 # fig.plot([1,20,3,40])st.pyplot(fig) 
-def app():
+#def app():
     st.title('Because Los Angeles is such a large district, we identified it as an outlier and we dropped it.')
     # https://medium.com/@u.praneel.nihar/building-multi-page-web-app-using-streamlit-7a40d55fa5b4
     # http://awesome-streamlit.org/https://news.ycombinator.com/item?id=21158487https://towardsdatascience.com/coding-ml-tools-like-you-code-ml-models-ddba3357eace
