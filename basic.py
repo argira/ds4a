@@ -95,7 +95,7 @@ def correlation_table_revenue_scores_ethnicity(df):
              height=alt.Step(80)
             )
 
-   chart += chart.mark_text(size=25).encode(
+    chart += chart.mark_text(size=25).encode(
         text=alt.Text('correlation', format=".2f"),
         color=alt.condition(
             "datum.correlation > 0.1",
