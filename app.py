@@ -10,7 +10,7 @@ PAGES = {
     "Basic Analysis": basic,
     "Extended EDA": eda_districs,
     "Further EDA at School level": eda_schools,
-    "Analysis for Ethniciies": eda_ethnicities
+    "Analysis for Ethnicities": eda_ethnicities
 }
 
 st.sidebar.title('Navigation')
