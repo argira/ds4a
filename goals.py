@@ -47,7 +47,7 @@ def app():
 
     def histogram_revenue_per_student(df):
         plt.figure(figsize=(8,6))
-        sns.distplot(df['Revenue per student'])
+        sns.displot( x="Revenue per student",kind="kde",  data=df, palette='plasma', fill=True)
         plt.title('Revenue per student averages $9409', fontsize = 16)
 
         # Adding labels
@@ -78,7 +78,7 @@ def app():
 
     def histogram_scale_scores(df):
         plt.figure(figsize=(6,4))
-        sns.distplot(df['Mean Scale Score'])
+        sns.displot( x="Mean Scale Score",kind="kde",  data=df, palette='plasma', fill=True)
         plt.title('Mean Scale Scores average 2520 points', fontsize = 16)
         st.pyplot(plt)
 
