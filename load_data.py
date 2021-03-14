@@ -27,7 +27,7 @@ def data_prep_total_enrollment():
 def data_prep_assessment():
     return pd.read_csv('organized_notebooks/dashboard_assessment.csv', index_col=0)
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 def data_prep_final_merged():
     df = pd.read_csv('organized_notebooks/dashboard_final_merged.csv')
     # dataset containing school districts with over $20,000 revenue per student - during our research
